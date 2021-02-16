@@ -32,7 +32,7 @@ for entry in coords:
         e_lat = float(lat_txt)
         if not (lat_lwr_bnd < e_lat and e_lat < lat_upr_bnd):
             continue
-        if not (lng_lwr_bnd < e_lng and e_lng < lat_lwr_bnd):
+        if not (lng_lwr_bnd < e_lng and e_lng < lng_upr_bnd):
             continue
         newobj = {}
         for column in list(row):
