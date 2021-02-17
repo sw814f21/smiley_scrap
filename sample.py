@@ -24,8 +24,8 @@ rows = [r for r in list(root) if r[6].text.lower(
 
 for entry in coords:
     lat_lwr_bnd = entry[1] - entry[3]
-    lat_upr_bnd = entry[1] + entry[3]
-    lng_lwr_bnd = entry[2] - entry[4]
+    lat_upr_bnd = entry[1]
+    lng_lwr_bnd = entry[2]
     lng_upr_bnd = entry[2] + entry[4]
 
     result = {}
