@@ -7,10 +7,6 @@ BRANCHEKODER_WHITELIST = 'DD.56.10.99'
 coords = [('bjerringbro', 56.3446694, 9.7106217, 0.05, 0.05),
           ('brande', 55.93161, 8.947574, 0.10, 0.10)]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> json
 tree = ET.parse(FILENAME)
 root = tree.getroot()
 rows = [r for r in list(root) if r[6].text.lower(
