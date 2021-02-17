@@ -15,11 +15,12 @@ rows = [r for r in list(root) if r[6].text.lower(
 
 with open('smallcities.csv', newline='\n') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=';')
+    next(csv_reader, None)
     for entry in csv_reader:
-        lat_lwr_bnd = entry[4]
-        lat_upr_bnd = entry[2]
-        lng_lwr_bnd = entry[3]
-        lng_upr_bnd = entry[5]
+        lat_lwr_bnd = float(entry[4])
+        lat_upr_bnd = float(entry[2])
+        lng_lwr_bnd = float(entry[3])
+        lng_upr_bnd = float(entry[5])
 
         result = {}
         for row in rows:
