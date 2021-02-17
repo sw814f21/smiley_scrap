@@ -8,7 +8,10 @@ FILES = 4
 OUTPUT = 'sample'
 BRANCHEKODER_WHITELIST = 'DD.56.10.99'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> json
 tree = ET.parse(FILENAME)
 root = tree.getroot()
 rows = [r for r in list(root) if r[6].text.lower(
