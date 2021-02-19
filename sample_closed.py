@@ -23,7 +23,10 @@ resultstr = result.stdout.decode('utf-8')
 
 first_smiley_data = json.loads(resultstr)
 
-closed_data = [first_smiley_data[entry] for entry in closed_entrynos]
+with open(FILENAME) as input:
+    newdata = json.load(input)
+
+closed_data = [first_smiley_data[entry] for entry in closed_entrynos if not newdata.get(entry)]
 
 with open('data_closed.json', 'w') as outfile:
     json.dump(closed_data, outfile, indent=2)
