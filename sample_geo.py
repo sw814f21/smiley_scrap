@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 from random import sample
 import json
+from util import sort_navnelbnr, xmlelement_to_dict
 import csv
 
 FILENAME = 'smiley_xml.xml'
